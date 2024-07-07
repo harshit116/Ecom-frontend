@@ -1,0 +1,39 @@
+
+.flex-wrapper {
+    display: flex;
+    flex-direction: column;
+    background-color: #333;
+
+    min-height: 100vh;
+  }
+  
+  .flex-content {
+    flex: 1;
+    position: relative; 
+    background-color: #333;
+  }
+ 
+  @media (max-width: 1200px) {
+    .flex-content {
+      min-height: 60vh;
+    }
+  }
+  
+  @media (max-width: 992px) {
+    .flex-content {
+      min-height: 50vh;
+    }
+  }
+  
+  @media (max-width: 768px) {
+    .flex-content {
+      min-height: 40vh;
+    }
+  }
+  
+  @media (max-width: 576px) {
+    .flex-content {
+      min-height: 30vh;
+    }
+  }
+  
