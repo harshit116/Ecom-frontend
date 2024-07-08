@@ -8,7 +8,7 @@ export default function Footer() {
     >
       <div className="row">
         <div className="col-md-6 mb-2">
-          © 2024 Project K All Rights Reserved.
+          © 2024 Project K All Rights Reserved
         </div>
         <div className="col-md-3 mb-2">Privacy Policy</div>
         <div className="col-md-3 v">Terms of Service</div>
