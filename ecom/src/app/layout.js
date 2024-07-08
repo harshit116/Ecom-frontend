@@ -20,7 +20,9 @@ export default function RootLayout({ children }) {
         </header>
         <div className="flex-wrapper">
           <main>
-            <div className="content">{children}</div>
+            <div className="content" style={{ color: "white" }}>
+              {children}
+            </div>
           </main>
         </div>
         <footer>
