@@ -57,7 +57,7 @@ export default function page() {
       <div className="d-flex justify-content-center mt-4 ">
         <h6 className="text-secondary ">Dont have an account</h6>
       </div>
-      <div className="d-flex justify-content-center mt-4">
+      <div className="d-flex justify-content-center mt-4 mb-2">
         <button type="button" className="btn btn-secondary">
           Create Account
         </button>

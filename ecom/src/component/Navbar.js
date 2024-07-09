@@ -21,21 +21,29 @@ export default function Navbar() {
         >
           <span className="navbar-toggler-icon"></span>
         </button>
-        
-          <div className="collapse navbar-collapse" id="navbarSupportedContent">
+
+        <div className="collapse navbar-collapse" id="navbarSupportedContent">
           <ul className="navbar-nav me-auto mb-2 mb-lg-0">
             <li className="nav-item">
-              <Link className="nav-link active" aria-current="page" href="/category">
+              <Link
+                className="nav-link active"
+                aria-current="page"
+                href="/category"
+              >
                 Category
               </Link>
-              </li>
-              <li className="nav-item">
-              <Link className="nav-link active" aria-current="page" href="/wishlist">
+            </li>
+            <li className="nav-item">
+              <Link
+                className="nav-link active"
+                aria-current="page"
+                href="/wishlist"
+              >
                 Wishlist
               </Link>
             </li>
           </ul>
-          
+
           <form className="d-flex" role="search">
             <input
               className="form-control me-2"
@@ -47,6 +55,15 @@ export default function Navbar() {
               Search
             </button>
           </form>
+          <div className="nav-item ps-2" style={{ color: "white" }}>
+            <Link className="nav-link active" aria-current="page" href="/login">
+              <img
+                className=""
+                src="/icon-person.gif"
+                style={{ width: "30px", height: "auto" }}
+              />
+            </Link>
+          </div>
         </div>
       </div>
     </nav>
