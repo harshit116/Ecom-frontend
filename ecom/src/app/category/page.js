@@ -1,6 +1,9 @@
+"use client"
 import Link from 'next/link';
+import { useState } from 'react';
 
 const Category = () => {
+  const [selectedCategory, setSelectedCategory] = useState(null);
   const categories = [
     {
       name: "Men",
@@ -67,30 +70,37 @@ const Category = () => {
     },
   ];
 
+  const handleCategoryClick = (category) => {
+    setSelectedCategory(category); 
+  };
+
   
   return (
     <div className="container mt-4">
       <h1>Categories</h1>
-      {categories.map((category, index) => (
-        <div key={index} className="dropdown mb-3">
+      <div className="d-flex flex-wrap mb-3">
+        {categories.map((category, index) => (
           <button
-            className="btn btn-secondary dropdown-toggle"
-            type="button"
-            id={`dropdownMenuButton-${index}`}
-            data-bs-toggle="dropdown"
-            aria-expanded="false"
+            key={index}
+            className="btn btn-secondary m-2"
+            onClick={() => handleCategoryClick(category)} 
           >
             {category.name}
           </button>
-          <ul className="dropdown-menu" aria-labelledby={`dropdownMenuButton-${index}`}>
-            {category.items.map((item, idx) => (
-              <li key={idx}>
-                <a href={item.path} className="dropdown-item">{item.name}</a>
+        ))}
+      </div>
+      {selectedCategory && (
+        <div className="mt-4">
+          <h2>{selectedCategory.name}</h2>
+          <ul className="list-group">
+            {selectedCategory.items.map((item, idx) => (
+              <li key={idx} className="list-group-item">
+                <a href={item.path} className="text-decoration-none">{item.name}</a>
               </li>
             ))}
           </ul>
         </div>
-      ))}
+      )}
     </div>
   );
 };
